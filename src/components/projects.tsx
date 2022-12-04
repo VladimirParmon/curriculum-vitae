@@ -9,7 +9,6 @@ const Embla = styled.div`
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
-  border-radius: 50px;
   background-color: ${(props) => props.theme.background};
 `;
 
@@ -166,7 +165,10 @@ export function Projects() {
           <EmblaSlide>
             <InnerContainer>
               <SliderDescription>Work in progress...</SliderDescription>
-              <CarouselImage src="assets/placeholder.jpg" alt="Work in progress placeholder" />
+              <CarouselImage
+                src="assets/slider/placeholder.jpg"
+                alt="Work in progress placeholder"
+              />
             </InnerContainer>
           </EmblaSlide>
         </EmblaContainer>
