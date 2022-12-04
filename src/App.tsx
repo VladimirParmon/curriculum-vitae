@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { ThemeProvider } from "styled-components";
+import { ContentContainer, MainContainer, PageControls } from "./globalStyledComponents";
+import { LanguageSwitch } from "./components/languageSwitch";
+import { ThemeSwitch } from "./components/themeSwitch";
+import { ThemeMode } from "./constants/constants";
+import { MyTheme } from "./constants/models";
+import { darkTheme, lightTheme } from "./constants/themes";
+import { Welcome } from "./components/welcome";
+import { ContactsAndInfo } from "./components/contactsAndInfo";
+import { SoftSkills } from "./components/softSkills";
+import { HardSkills } from "./components/hardSkills";
+import { Education } from "./components/education";
+import { Projects } from "./components/projects";
 
-function App() {
+export function App() {
+  const [themeMode, setThemeMode] = useState<ThemeMode>("light");
+  const theme: MyTheme = themeMode === "light" ? lightTheme : darkTheme;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <MainContainer>
+        <ContentContainer>
+          <PageControls>
+            <ThemeSwitch setThemeMode={setThemeMode} themeMode={themeMode}></ThemeSwitch>
+            <LanguageSwitch></LanguageSwitch>
+          </PageControls>
+
+          <Welcome></Welcome>
+          <ContactsAndInfo></ContactsAndInfo>
+          <SoftSkills></SoftSkills>
+          <HardSkills></HardSkills>
+          <Education></Education>
+          <Projects></Projects>
+        </ContentContainer>
+      </MainContainer>
+    </ThemeProvider>
   );
 }
-
-export default App;
