@@ -13,6 +13,7 @@ import { HardSkills } from "./components/hardSkills";
 import { Education } from "./components/education";
 import { Projects } from "./components/projects";
 import { English } from "./components/english";
+import { Footer } from "./components/footer";
 
 export function App() {
   const [themeMode, setThemeMode] = useState<ThemeMode>("light");
@@ -33,6 +34,7 @@ export function App() {
           <Education></Education>
           <Projects></Projects>
           <English></English>
+          <Footer></Footer>
         </ContentContainer>
       </MainContainer>
     </ThemeProvider>
