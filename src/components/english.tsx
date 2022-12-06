@@ -39,7 +39,6 @@ const Expander = styled.div`
   width: 100%;
   height: 50px;
   border-radius: 20px;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 1));
   display: flex;
   justify-content: center;
   align-items: center;
