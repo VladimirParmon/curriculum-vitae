@@ -20,7 +20,10 @@ export const slides = [
   {
     slideName: "Builder project",
     link: "https://github.com/VladimirParmon/BuilderProjectV2",
-    techLogos: ["assets/slider/techs/angularjs-original.svg", "assets/electron-original.svg"],
+    techLogos: [
+      "assets/slider/techs/angularjs-original.svg",
+      "assets/slider/techs/electron-original.svg",
+    ],
     imageSrc: "assets/slider/builder.JPG",
   },
   {
