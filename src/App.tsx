@@ -12,6 +12,7 @@ import { SoftSkills } from "./components/softSkills";
 import { HardSkills } from "./components/hardSkills";
 import { Education } from "./components/education";
 import { Projects } from "./components/projects";
+import { English } from "./components/english";
 
 export function App() {
   const [themeMode, setThemeMode] = useState<ThemeMode>("light");
@@ -31,6 +32,7 @@ export function App() {
           <HardSkills></HardSkills>
           <Education></Education>
           <Projects></Projects>
+          <English></English>
         </ContentContainer>
       </MainContainer>
     </ThemeProvider>
