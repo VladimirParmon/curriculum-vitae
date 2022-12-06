@@ -2,6 +2,8 @@ import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
 import { slides } from "../constants/slides";
+import { bp, myBreakpoints } from "../constants/breakpoints";
+import { AxisOptionType } from "embla-carousel/components/Axis";
 
 const Embla = styled.div`
   position: relative;
@@ -14,33 +16,46 @@ const Embla = styled.div`
 
 const EmblaContainer = styled.div`
   display: flex;
+  height: 450px;
+  width: 100%;
+  ${bp.maxWidth("l")`
+    flex-direction: column;
+  `}
 `;
 
 const EmblaSlide = styled.div`
-  position: relative;
   padding: 10px;
+  width: 100%;
 `;
 
 const InnerContainer = styled.div`
   position: relative;
   overflow: hidden;
   width: 800px;
-  height: 400px;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  ${bp.maxWidth("l")`
+    width: 100%;
+  `}
+  ${bp.minWidth("l")`
+    height: 400px;
+  `}
 `;
+
 const CarouselImage = styled.img`
-  position: relative;
   width: 100%;
-  height: 100%;
   cursor: pointer;
   object-fit: cover;
   border-radius: 20px;
+  ${bp.minWidth("l")`
+    height: 100%;
+  `}
 `;
 
 const CarouselLink = styled.a`
-  position: relative;
   height: 100%;
   width: 100%;
   &:hover {
@@ -66,13 +81,18 @@ const TechLogo = styled.img`
   width: 50px;
   height: 50px;
 `;
+
 const SliderDescription = styled.span`
   position: absolute;
   color: white;
   z-index: 101;
   opacity: 0;
-  font-size: 3rem;
+  font-size: 2rem;
   pointer-events: none;
+
+  ${bp.minWidth("l")`
+    font-size: 3rem;
+  `}
 `;
 
 const SliderControls = styled.div`
@@ -80,10 +100,14 @@ const SliderControls = styled.div`
   gap: 20px;
   justify-content: center;
   align-items: center;
+  ${bp.maxWidth("l")`
+    display: none;
+  `}
 `;
 
 const Button = styled.button`
   cursor: pointer;
+  transition: 0.2s;
   background-color: transparent;
   touch-action: manipulation;
   border: 0;
@@ -94,22 +118,46 @@ const Button = styled.button`
   &:disabled {
     color: ${(props) => props.theme.idle};
   }
+
+  &:hover {
+    color: ${(props) => props.theme.accent};
+  }
+`;
+
+const DotContainer = styled.div`
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover div {
+    transform: scale(1.2);
+  }
 `;
 
 const Dot = styled.div<{ selected: boolean }>`
+  transition: 0.1s;
   width: 30px;
   height: 4px;
   border-radius: 10px;
   background-color: ${(props) => (props.selected ? props.theme.accent : props.theme.idle)};
-  cursor: pointer;
 `;
 
-const options = {
-  dragFree: true,
-  startIndex: 1,
-};
-
 export function Projects() {
+  const x = "x" as AxisOptionType;
+  const y = "y" as AxisOptionType;
+  const w = `(max-width: ${myBreakpoints.l}px)`;
+  const options = {
+    dragFree: true,
+    startIndex: 1,
+    axis: x,
+    breakpoints: {
+      [w]: { axis: y },
+    },
+  };
+
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
@@ -175,13 +223,15 @@ export function Projects() {
 
         <SliderControls>
           <Button onClick={scrollPrev} disabled={!prevBtnEnabled}>
-            Previous
+            ← Previous
           </Button>
           {howManyItems.map((_, i) => (
-            <Dot onClick={() => scrollTo(i)} selected={i === selectedIndex} key={i} />
+            <DotContainer onClick={() => scrollTo(i)} key={i}>
+              <Dot selected={i === selectedIndex} />
+            </DotContainer>
           ))}
           <Button onClick={scrollNext} disabled={!nextBtnEnabled}>
-            Next
+            Next →
           </Button>
         </SliderControls>
       </Embla>
