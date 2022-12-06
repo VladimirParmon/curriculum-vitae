@@ -8,3 +8,10 @@ export interface MyTheme {
   idle: string;
   accent: string;
 }
+
+export interface Slide {
+  slideName: string;
+  link: string;
+  techLogos: string[];
+  imageSrc: string;
+}

@@ -1,4 +1,6 @@
-export const slides = [
+import { Slide } from "./models";
+
+export const slides: Slide[] = [
   {
     slideName: "Museum",
     link: "https://rolling-scopes-school.github.io/vladimirparmon-JSFE2021Q3/Museum/",

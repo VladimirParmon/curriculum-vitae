@@ -1,12 +1,6 @@
 import styled from "styled-components";
-import { ThemeMode } from "../constants/constants";
 
-interface Props {
-  setThemeMode: React.Dispatch<React.SetStateAction<ThemeMode>>;
-  themeMode: ThemeMode;
-}
-
-const ToggleButton = styled.input`
+export const ToggleButton = styled.input`
   position: relative;
   width: 50px;
   height: 26px;
@@ -43,32 +37,15 @@ const ToggleButton = styled.input`
   }
 `;
 
-const SwitchIcon = styled.img`
+export const SwitchIcon = styled.img`
   width: 25px;
   height: 25px;
 `;
 
-const SwitchContainer = styled.div`
+export const SwitchContainer = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 `;
-
-export function ThemeSwitch({ setThemeMode, themeMode }: Props) {
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const nextMode = e.target.checked ? "dark" : "light";
-    setThemeMode(nextMode);
-  };
-  return (
-    <SwitchContainer>
-      <ToggleButton type="checkbox" id="modeSwitch" onChange={handleChange} />
-      {themeMode === "light" ? (
-        <SwitchIcon src="assets/day.png" alt="lightMode" id="lightIcon" />
-      ) : (
-        <SwitchIcon src="assets/night.png" alt="darkMode" id="darkIcon" />
-      )}
-    </SwitchContainer>
-  );
-}

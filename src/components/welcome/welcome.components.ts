@@ -1,10 +1,7 @@
-import { useContext } from "react";
 import styled from "styled-components";
-import { MyTheme } from "../constants/models";
-import { ThemeContext } from "styled-components";
-import { bp } from "../constants/breakpoints";
+import { bp } from "../../constants/breakpoints";
 
-const WelcomeContainer = styled.div`
+export const WelcomeContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -14,19 +11,22 @@ const WelcomeContainer = styled.div`
     flex-direction: column;
   `}
 `;
-const NameSpanContainer = styled.div`
+
+export const NameSpanContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
 `;
-const SmallGreetingSpan = styled.span`
+
+export const SmallGreetingSpan = styled.span`
   font-family: "Amiri", serif;
   font-size: 2rem;
   ${bp.maxWidth("m")`
   font-size: 1rem;
   `}
 `;
-const NameSpan = styled.span`
+
+export const NameSpan = styled.span`
   font-family: "Amiri", serif;
   font-size: 2.5rem;
   line-height: 2rem;
@@ -41,12 +41,14 @@ const NameSpan = styled.span`
     font-size: 5rem;
   `}
 `;
-const BreakpointWrapper = styled.div`
+
+export const BreakpointWrapper = styled.div`
   ${bp.maxWidth("xl")`
     display: none;
   `}
 `;
-const ProfileImageContainer = styled.div`
+
+export const ProfileImageContainer = styled.div`
   min-width: 450px;
   min-height: 450px;
   max-width: 450px;
@@ -64,7 +66,7 @@ const ProfileImageContainer = styled.div`
     border: 5px solid rgba(204,204,204,0.4);
   `}
 `;
-const ProfileBackgroundContainer = styled.div`
+export const ProfileBackgroundContainer = styled.div`
   width: 100%;
   height: 400px;
   overflow: hidden;
@@ -79,29 +81,8 @@ const ProfileBackgroundContainer = styled.div`
     display: none;
   `}
 `;
-const ProfileImage = styled.img`
+
+export const ProfileImage = styled.img`
   max-width: 450px;
   width: 100%;
 `;
-
-export function Welcome() {
-  const theme: MyTheme = useContext(ThemeContext);
-  return (
-    <WelcomeContainer>
-      <ProfileBackgroundContainer>
-        <ProfileImageContainer>
-          <ProfileImage src={theme.profilePhoto} alt="The profile owner" />
-        </ProfileImageContainer>
-      </ProfileBackgroundContainer>
-      <NameSpanContainer>
-        <SmallGreetingSpan>Welcome!</SmallGreetingSpan>
-        <NameSpan>Vladimir Parmon</NameSpan>
-      </NameSpanContainer>
-      <BreakpointWrapper>
-        <ProfileImageContainer>
-          <ProfileImage src={theme.profilePhoto} alt="The profile owner" />
-        </ProfileImageContainer>
-      </BreakpointWrapper>
-    </WelcomeContainer>
-  );
-}

@@ -2,18 +2,18 @@ import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { ContentContainer, MainContainer, PageControls } from "./globalStyledComponents";
 import { LanguageSwitch } from "./components/languageSwitch";
-import { ThemeSwitch } from "./components/themeSwitch";
+import { ThemeSwitch } from "./components/themeSwitch/themeSwitch";
 import { ThemeMode } from "./constants/constants";
 import { MyTheme } from "./constants/models";
 import { darkTheme, lightTheme } from "./constants/themes";
-import { Welcome } from "./components/welcome";
+import { Welcome } from "./components/welcome/welcome";
 import { ContactsAndInfo } from "./components/contactsAndInfo";
 import { SoftSkills } from "./components/softSkills";
 import { HardSkills } from "./components/hardSkills";
 import { Education } from "./components/education";
-import { Projects } from "./components/projects";
-import { English } from "./components/english";
-import { Footer } from "./components/footer";
+import { Projects } from "./components/projects/projects";
+import { English } from "./components/english/english";
+import { Footer } from "./components/footer/footer";
 
 export function App() {
   const [themeMode, setThemeMode] = useState<ThemeMode>("light");
