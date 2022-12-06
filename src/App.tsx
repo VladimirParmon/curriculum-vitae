@@ -23,18 +23,18 @@ export function App() {
       <MainContainer>
         <ContentContainer>
           <PageControls>
-            <ThemeSwitch setThemeMode={setThemeMode} themeMode={themeMode}></ThemeSwitch>
-            <LanguageSwitch></LanguageSwitch>
+            <ThemeSwitch setThemeMode={setThemeMode} themeMode={themeMode} />
+            <LanguageSwitch />
           </PageControls>
 
-          <Welcome></Welcome>
-          <ContactsAndInfo></ContactsAndInfo>
-          <SoftSkills></SoftSkills>
-          <HardSkills></HardSkills>
-          <Education></Education>
-          <Projects></Projects>
-          <English></English>
-          <Footer></Footer>
+          <Welcome />
+          <ContactsAndInfo />
+          <SoftSkills />
+          <HardSkills />
+          <Education />
+          <Projects />
+          <English />
+          <Footer />
         </ContentContainer>
       </MainContainer>
     </ThemeProvider>
