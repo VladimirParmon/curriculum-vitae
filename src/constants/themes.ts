@@ -8,12 +8,12 @@ export const lightTheme: MyTheme = {
   bgImage: "assets/background.jpg",
   bgImageWide: "assets/photo-wide-light.jpg",
   idle: "#efefef",
-  accent: "#404040",
+  accent: "#A2A2A1FF",
 };
 
 export const darkTheme: MyTheme = {
-  background: "rgb(14, 14, 14)",
-  color: "rgba(255, 255, 255, 0.8)",
+  background: "#171214",
+  color: "rgba(255, 255, 255, 0.85)",
   profilePhoto: "assets/photo-dark.jpg",
   profilePhotoAlign: "flex-start",
   bgImage: "assets/background.jpg",

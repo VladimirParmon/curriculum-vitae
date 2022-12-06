@@ -18,7 +18,7 @@ export const ContentContainer = styled.div`
   position: relative;
   margin: 0 auto;
   max-width: 1200px;
-  padding: 10px 30px 20px 30px;
+  padding: 10px 60px 20px 60px;
   border-radius: 50px;
   background-color: ${(props) => props.theme.background};
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;

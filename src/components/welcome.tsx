@@ -38,7 +38,7 @@ const NameSpan = styled.span`
   `}
   ${bp.minWidth("xl")`
     line-height: 5rem;
-    font-size: 6rem;
+    font-size: 5rem;
   `}
 `;
 const BreakpointWrapper = styled.div`
@@ -55,6 +55,7 @@ const ProfileImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: ${(props) => props.theme.profilePhotoAlign};
+  filter: drop-shadow(5px 5px 10px rgba(255, 255, 255, 1));
   ${bp.minWidth("s")`
     border-radius: 50%;
 
