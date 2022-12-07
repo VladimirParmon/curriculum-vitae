@@ -14,6 +14,7 @@ import { Education } from "./components/education";
 import { Projects } from "./components/projects/projects";
 import { English } from "./components/english/english";
 import { Footer } from "./components/footer/footer";
+import "./i18n";
 
 export function App() {
   const [themeMode, setThemeMode] = useState<ThemeMode>("light");

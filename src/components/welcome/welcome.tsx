@@ -11,9 +11,11 @@ import {
   SmallGreetingSpan,
   WelcomeContainer,
 } from "./welcome.components";
+import { useTranslation } from "react-i18next";
 
 export function Welcome() {
   const theme: MyTheme = useContext(ThemeContext);
+  const { t } = useTranslation();
   return (
     <WelcomeContainer>
       <ProfileBackgroundContainer>
@@ -22,8 +24,8 @@ export function Welcome() {
         </ProfileImageContainer>
       </ProfileBackgroundContainer>
       <NameSpanContainer>
-        <SmallGreetingSpan>Welcome!</SmallGreetingSpan>
-        <NameSpan>Vladimir Parmon</NameSpan>
+        <SmallGreetingSpan>{t("Name span accessory")}</SmallGreetingSpan>
+        <NameSpan>{t("Name span")}</NameSpan>
       </NameSpanContainer>
       <BreakpointWrapper>
         <ProfileImageContainer>

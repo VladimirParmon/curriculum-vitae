@@ -1,11 +1,14 @@
+import { useTranslation } from "react-i18next";
+
 export function ContactsAndInfo() {
+  const { t } = useTranslation();
   return (
     <section id="contacts">
-      <h2>Contacts & Info</h2>
+      <h2>{t("Heading")}</h2>
       <hr />
       <ul>
         <li>
-          <b>Phone</b>: +375 25 535 15 22
+          <b>{t("Phone")}</b>: +375 25 535 15 22
         </li>
         <li>
           <b>E-mail</b>: vladimirredblooded@gmail.com
@@ -14,17 +17,16 @@ export function ContactsAndInfo() {
           <b>Telegram</b>: @red1blooded
         </li>
         <li>
-          <b>Purpose</b>: to present my person to the world in a meritorious manner
+          <b>{t("Purpose")}</b>: {t("Purpose+")}
         </li>
         <li>
-          <b>Previous occupation</b>: CNC controlled milling machines and manipulators operator
+          <b>{t("Previous occupation")}</b>: {t("Previous occupation+")}
         </li>
         <li>
-          <b>As for now</b>: a student of Minsk State Linguistic University (cross-cultural
-          communication, IT)
+          <b>{t("As for now")}</b>: {t("As for now+")}
         </li>
         <li>
-          <b>Languages</b>: Russian, English, German, <i>Arabic (as a hobby)</i>
+          <b>{t("Languages")}</b>: {t("Languages+")}
         </li>
       </ul>
     </section>

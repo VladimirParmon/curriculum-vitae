@@ -38,7 +38,7 @@ export const NameSpan = styled.span`
   `}
   ${bp.minWidth("xl")`
     line-height: 5rem;
-    font-size: 5rem;
+    font-size: 4.7rem;
   `}
 `;
 
