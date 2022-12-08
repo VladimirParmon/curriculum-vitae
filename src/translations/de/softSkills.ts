@@ -3,7 +3,7 @@ export const softSkills = {
   "Team player": "Teamspieler",
   Multitasking: "Multitaskingfähig",
   Rational: "Rationale Herangehensweise an die Lösung von Problemen",
-  "Mental stamina": "Höhe Belastbarkeit und gute mentale Ausdauerschwellen",
+  "Mental stamina": "Höhe Belastbarkeit und hervorragendes mentales Durchhaltevermögen",
   Health: "Gute körperliche Verfassung und ausgezeichnete Gesundheit",
   Military: "Habe mein Militärticket und unterliege keinem Wehrdienst",
   Experience:
