@@ -44,8 +44,18 @@ export const InnerContainer = styled.div`
 export const CarouselImage = styled.img`
   width: 100%;
   cursor: pointer;
+  height: 150px;
   object-fit: cover;
   border-radius: 20px;
+  ${bp.minWidth("xs")`
+    height: 225px;
+  `}
+  ${bp.minWidth("s")`
+    height: 300px;
+  `}
+  ${bp.minWidth("m")`
+    height: 350px;
+  `}
   ${bp.minWidth("l")`
     height: 100%;
   `}
@@ -63,6 +73,8 @@ export const CarouselLink = styled.a`
     }
   }
 `;
+
+//################### Decorations ####################
 
 export const TechLogos = styled.div`
   display: flex;
@@ -90,6 +102,8 @@ export const SliderDescription = styled.span`
     font-size: 3rem;
   `}
 `;
+
+//################### Controls #####################
 
 export const SliderControls = styled.div`
   display: flex;
