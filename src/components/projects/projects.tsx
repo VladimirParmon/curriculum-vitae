@@ -6,6 +6,8 @@ import { PlaceholderSlide } from "./placeholderSlide";
 import { SingleSlide } from "./slide";
 import { Controls } from "./sliderControls";
 import { options } from "./config";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
+import { Loader } from "../loader";
 
 export function Projects() {
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
@@ -49,19 +51,21 @@ export function Projects() {
   };
 
   return (
-    <section id="projects">
-      <h2>Projects</h2>
-      <hr />
-      <Embla ref={emblaRef}>
-        <EmblaContainer>
-          {slides.map((slide) => (
-            <SingleSlide slide={slide} key={slide.slideName} />
-          ))}
-          <PlaceholderSlide />
-        </EmblaContainer>
+    <LazyLoadComponent placeholder={Loader("relative")}>
+      <section id="projects">
+        <h2>Projects</h2>
+        <hr />
+        <Embla ref={emblaRef}>
+          <EmblaContainer>
+            {slides.map((slide) => (
+              <SingleSlide slide={slide} key={slide.slideName} />
+            ))}
+            <PlaceholderSlide />
+          </EmblaContainer>
 
-        <Controls {...controls} />
-      </Embla>
-    </section>
+          <Controls {...controls} />
+        </Embla>
+      </section>
+    </LazyLoadComponent>
   );
 }

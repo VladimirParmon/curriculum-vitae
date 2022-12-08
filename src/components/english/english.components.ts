@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { bp } from "../../constants/breakpoints";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export const ImageContainer = styled.div<{ height: string }>`
   position: relative;
@@ -24,13 +25,13 @@ export const ImageContainer = styled.div<{ height: string }>`
   }
 `;
 
-export const Image1 = styled.img`
+export const Image1 = styled(LazyLoadImage)`
   grid-area: big;
 `;
-export const Image2 = styled.img`
+export const Image2 = styled(LazyLoadImage)`
   grid-area: small1;
 `;
-export const Image3 = styled.img`
+export const Image3 = styled(LazyLoadImage)`
   grid-area: small2;
 `;
 

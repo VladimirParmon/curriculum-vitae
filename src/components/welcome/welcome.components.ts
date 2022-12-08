@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { bp } from "../../constants/breakpoints";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export const WelcomeContainer = styled.div`
   width: 100%;
@@ -82,7 +83,7 @@ export const ProfileBackgroundContainer = styled.div`
   `}
 `;
 
-export const ProfileImage = styled.img`
+export const ProfileImage = styled(LazyLoadImage)`
   max-width: 450px;
   width: 100%;
 `;

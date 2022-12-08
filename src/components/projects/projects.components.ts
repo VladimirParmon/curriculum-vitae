@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { bp } from "../../constants/breakpoints";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export const Embla = styled.div`
   position: relative;
@@ -41,7 +42,7 @@ export const InnerContainer = styled.div`
   `}
 `;
 
-export const CarouselImage = styled.img`
+export const CarouselImage = styled(LazyLoadImage)`
   width: 100%;
   cursor: pointer;
   height: 150px;

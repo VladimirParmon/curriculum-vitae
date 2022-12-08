@@ -15,7 +15,7 @@ export const darkTheme: MyTheme = {
   background: "#171214",
   color: "rgba(255, 255, 255, 0.85)",
   profilePhoto: "assets/photo-dark.jpg",
-  profilePhotoAlign: "flex-start",
+  profilePhotoAlign: "flex-end",
   bgImage: "assets/background.jpg",
   bgImageWide: "assets/photo-wide-dark.jpg",
   idle: "#efefef",

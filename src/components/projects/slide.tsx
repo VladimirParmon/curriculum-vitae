@@ -8,6 +8,7 @@ import {
   TechLogos,
 } from "./projects.components";
 import { Slide } from "../../constants/models";
+import { Loader } from "../loader";
 
 interface Props {
   slide: Slide;
@@ -23,7 +24,11 @@ export function SingleSlide({ slide }: Props) {
           ))}
         </TechLogos>
         <CarouselLink href={slide.link} target="_blank">
-          <CarouselImage src={slide.imageSrc} alt={slide.slideName} />
+          <CarouselImage
+            placeholder={Loader("relative")}
+            src={slide.imageSrc}
+            alt={slide.slideName}
+          />
         </CarouselLink>
         <SliderDescription>{slide.slideName}</SliderDescription>
       </InnerContainer>
