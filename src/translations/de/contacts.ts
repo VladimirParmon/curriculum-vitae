@@ -1,5 +1,5 @@
 export const contacts = {
-  Heading: "Kontakte & Info",
+  "Contacts heading": "Kontakte & Info",
   Phone: "Telefon",
   Purpose: "Zweck",
   "Purpose+": "um meine Person der Welt anständig zu vorstellen",

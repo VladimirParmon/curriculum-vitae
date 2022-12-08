@@ -4,7 +4,7 @@ export function ContactsAndInfo() {
   const { t } = useTranslation();
   return (
     <section id="contacts">
-      <h2>{t("Heading")}</h2>
+      <h2>{t("Contacts heading")}</h2>
       <hr />
       <ul>
         <li>

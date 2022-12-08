@@ -1,5 +1,5 @@
 export const softSkills = {
-  Heading: "Soft Skills und Vorteile",
+  "Soft skills heading": "Soft Skills und Vorteile",
   "Team player": "Teamspieler",
   Multitasking: "Multitaskingfähig",
   Rational: "Rationale Herangehensweise an die Lösung von Problemen",

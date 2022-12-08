@@ -4,7 +4,7 @@ export function SoftSkills() {
   const { t } = useTranslation();
   return (
     <section id="softSkills">
-      <h2>{t("Heading")}</h2>
+      <h2>{t("Soft skills heading")}</h2>
       <hr />
       <ol>
         {t("")}

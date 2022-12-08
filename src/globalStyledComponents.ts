@@ -18,12 +18,15 @@ export const ContentContainer = styled.div`
   position: relative;
   margin: 0 auto;
   max-width: 1200px;
-  padding: 10px 60px 20px 60px;
+  padding: 20px;
   border-radius: 50px;
   background-color: ${(props) => props.theme.background};
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
   color: ${(props) => props.theme.color};
+  ${bp.minWidth("m")`
+    padding: 10px 60px 20px 60px;
+  `}
 `;
 
 export const PageControls = styled.div`

@@ -28,7 +28,7 @@ export const SmallGreetingSpan = styled.span`
 
 export const NameSpan = styled.span`
   font-family: "Amiri", serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 2rem;
   white-space: nowrap;
 
