@@ -87,3 +87,12 @@ export const ProfileImage = styled(LazyLoadImage)`
   max-width: 450px;
   width: 100%;
 `;
+
+export const SmallDescription = styled.span`
+  font-size: 1rem;
+  text-align: center;
+  font-family: "Amiri", serif;
+  ${bp.minWidth("l")`
+    font-size: 1.5rem;
+  `}
+`;

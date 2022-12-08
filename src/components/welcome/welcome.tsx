@@ -8,6 +8,7 @@ import {
   ProfileBackgroundContainer,
   ProfileImage,
   ProfileImageContainer,
+  SmallDescription,
   SmallGreetingSpan,
   WelcomeContainer,
 } from "./welcome.components";
@@ -23,12 +24,17 @@ export function Welcome() {
       <WelcomeContainer>
         <ProfileBackgroundContainer>
           <ProfileImageContainer>
-            <ProfileImage effect="blur" src={theme.profilePhoto} alt="The profile owner" />
+            <ProfileImage
+              placeholder={Loader("absolute")}
+              src={theme.profilePhoto}
+              alt="The profile owner"
+            />
           </ProfileImageContainer>
         </ProfileBackgroundContainer>
         <NameSpanContainer>
           <SmallGreetingSpan>{t("Name span accessory")}</SmallGreetingSpan>
           <NameSpan>{t("Name span")}</NameSpan>
+          <SmallDescription>{t("Description")}</SmallDescription>
         </NameSpanContainer>
         <BreakpointWrapper>
           <ProfileImageContainer>
