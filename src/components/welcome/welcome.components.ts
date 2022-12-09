@@ -7,6 +7,7 @@ export const WelcomeContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 20px;
   gap: 30px;
   ${bp.maxWidth("xl")`
     flex-direction: column;
@@ -89,7 +90,7 @@ export const ProfileImage = styled(LazyLoadImage)`
 `;
 
 export const SmallDescription = styled.span`
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-align: center;
   font-family: "Amiri", serif;
   ${bp.minWidth("l")`
