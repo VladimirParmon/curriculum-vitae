@@ -3,12 +3,12 @@ export function HardSkills() {
   const { t } = useTranslation();
   return (
     <section id="hardSkills">
-      <h2>Technical Skills</h2>
+      <h2>{t("Hard skills heading")}</h2>
       <hr />
-      <p>
+      <p style={{ textAlign: "justify" }}>
         <Trans>{t("Computer science")}</Trans>
       </p>
-      <p>
+      <p style={{ textAlign: "justify" }}>
         <Trans>{t("Prior work")}</Trans>
       </p>
       <span>{t("Use frequently")}:</span>

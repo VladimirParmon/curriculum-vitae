@@ -8,8 +8,10 @@ import { Controls } from "./sliderControls";
 import { options } from "./config";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import { Loader } from "../loader";
+import { useTranslation } from "react-i18next";
 
 export function Projects() {
+  const { t } = useTranslation();
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
@@ -53,7 +55,7 @@ export function Projects() {
   return (
     <LazyLoadComponent placeholder={Loader("relative")}>
       <section id="projects">
-        <h2>Projects</h2>
+        <h2>{t("Projects heading")}</h2>
         <hr />
         <Embla ref={emblaRef}>
           <EmblaContainer>

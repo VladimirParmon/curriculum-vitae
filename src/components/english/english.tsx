@@ -2,8 +2,10 @@ import { useState } from "react";
 import { Expander, Image1, Image2, Image3, ImageContainer } from "./english.components";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import { Loader } from "../loader";
+import { useTranslation } from "react-i18next";
 
 export function English() {
+  const { t } = useTranslation();
   const [isExpanded, setIsExpanded] = useState(false);
   const flip = () => {
     setIsExpanded(!isExpanded);
@@ -11,7 +13,7 @@ export function English() {
   return (
     <LazyLoadComponent placeholder={Loader("relative")}>
       <section id="english">
-        <h2>English</h2>
+        <h2>{t("English heading")}</h2>
         <hr />
         <ImageContainer height={isExpanded ? "2000px" : "400px"}>
           <Image2
@@ -34,7 +36,7 @@ export function English() {
           />
         </ImageContainer>
         <Expander onClick={flip}>
-          {isExpanded ? <span>Hide</span> : <span>Show more</span>}
+          {isExpanded ? <span>{t("Button hide")}</span> : <span>{t("Button more")}</span>}
         </Expander>
       </section>
     </LazyLoadComponent>

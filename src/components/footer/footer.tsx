@@ -1,27 +1,29 @@
+import { useTranslation } from "react-i18next";
 import { Container, FooterContainer, Icon, Links } from "./footer.components";
 
 export function Footer() {
+  const { t } = useTranslation();
   return (
     <FooterContainer>
       <hr style={{ width: "100%" }} />
-      <h3 style={{ textAlign: "center" }}>Additional information</h3>
+      <h3 style={{ textAlign: "center" }}>{t("Footer heading")}</h3>
       <Links>
-        <a href="https://github.com/VladimirParmon">
+        <a href="https://github.com/VladimirParmon" target="__blank">
           <Container>
             <Icon src="assets/footer/github.svg" />
-            <span>Some amazing projects here</span>
+            <span>{t("Footer Github")}</span>
           </Container>
         </a>
-        <a href="www.linkedin.com/in/698717247">
+        <a href="https://www.linkedin.com/in/698717247" target="__blank">
           <Container>
             <Icon src="assets/footer/linkedin.svg" />
-            <span>Want to send an invitation?</span>
+            <span>{t("Footer LinkedIn")}</span>
           </Container>
         </a>
-        <a href="www.linkedin.com/in/698717247">
+        <a href="https://www.instagram.com/_vladimir_parmon/" target="__blank">
           <Container>
             <Icon src="assets/footer/instagram.svg" />
-            <span>Who doesn't want some likes, amaright</span>
+            <span>{t("Footer Instagram")}</span>
           </Container>
         </a>
         <Container>
@@ -30,7 +32,7 @@ export function Footer() {
         </Container>
       </Links>
       <br />
-      <p>2022, December</p>
+      <p>{t("Footer date")}</p>
     </FooterContainer>
   );
 }

@@ -1,18 +1,14 @@
+import { useTranslation } from "react-i18next";
+
 export function Education() {
+  const { t } = useTranslation();
   return (
     <section id="education">
-      <h2>Education</h2>
+      <h2>{t("Education heading")}</h2>
       <hr />
-      <ul>
-        <li>
-          Graduated a technical school - Branch of Belarusian National Technical University "Zhodino
-          State Polytechnic College" in 2019 (technician diploma)
-        </li>
-        <li>
-          Currently a student of Minsk State Linguistic University, will have graduated by 2024
-          (cross-cultural communication faculty, an interpreter/translator that works with technical
-          documentation or other information sources related to IT)
-        </li>
+      <ul style={{ textAlign: "justify" }}>
+        <li>{t("Graduated a techschool")}</li>
+        <li>{t("Graduated an Uni")}</li>
       </ul>
     </section>
   );

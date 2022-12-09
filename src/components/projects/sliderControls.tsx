@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Button, Dot, DotContainer, SliderControls } from "./projects.components";
 
 interface Props {
@@ -19,10 +20,11 @@ export function Controls({
   nextBtnEnabled,
   howManyItems,
 }: Props) {
+  const { t } = useTranslation();
   return (
     <SliderControls>
       <Button onClick={scrollPrev} disabled={!prevBtnEnabled}>
-        ← Previous
+        ← {t("Prev slide")}
       </Button>
       {howManyItems.map((_, i) => (
         <DotContainer onClick={() => scrollTo(i)} key={i}>
@@ -30,7 +32,7 @@ export function Controls({
         </DotContainer>
       ))}
       <Button onClick={scrollNext} disabled={!nextBtnEnabled}>
-        Next →
+        {t("Next slide")} →
       </Button>
     </SliderControls>
   );

@@ -6,8 +6,7 @@ export function SoftSkills() {
     <section id="softSkills">
       <h2>{t("Soft skills heading")}</h2>
       <hr />
-      <ol>
-        {t("")}
+      <ol style={{ textAlign: "justify" }}>
         <li>{t("Team player")}</li>
         <li>{t("Multitasking")}</li>
         <li>{t("Rational")}</li>

@@ -1,6 +1,6 @@
 export const hardSkills = {
-  "Hard skills heading": "Technical/Hard skills",
-  "Computer science": `Я обладаю общирными занниями в области <strong>информатики</strong> и 
+  "Hard skills heading": "Технические навыки/Hard skills",
+  "Computer science": `Я владею общирными знаниями в области <strong>информатики</strong> и 
   <strong>информационных технологий</strong> (т.к. я закончил технический колледж/филиал БНТУ 
   + это моя специализация перевода в МГЛУ), а так же я знаю <strong>несколько языков 
   программирования</strong> (учился на курсах и проходил стажеровки в коммерческих организациях)`,
