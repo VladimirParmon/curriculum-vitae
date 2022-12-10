@@ -72,7 +72,7 @@ export const slides: Slide[] = [
   },
   {
     slideName: "Drum kit",
-    link: "https://rolling-scopes-school.github.io/vladimirparmon-JSFEPRESCHOOL/Drumkit/Index.html",
+    link: "https://vladimirparmon.github.io/Drumkit/index.html",
     techLogos: ["assets/slider/techs/javascript-original.svg"],
     imageSrc: "assets/slider/drumkit.jpg",
   },
