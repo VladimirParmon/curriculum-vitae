@@ -9,7 +9,7 @@ export const slides: Slide[] = [
   },
   {
     slideName: "RS Lang",
-    link: "https://vladimirparmon.github.io/RS-Lang/index.html",
+    link: "https://github.com/VladimirParmon/RS-Lang",
     techLogos: ["assets/slider/techs/typescript-original.svg"],
     imageSrc: "assets/slider/lang.jpg",
   },
