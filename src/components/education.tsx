@@ -6,7 +6,7 @@ export function Education() {
     <section id="education">
       <h2>{t("Education heading")}</h2>
       <hr />
-      <ul style={{ textAlign: "justify" }}>
+      <ul>
         <li>{t("Graduated a techschool")}</li>
         <li>{t("Graduated an Uni")}</li>
       </ul>
