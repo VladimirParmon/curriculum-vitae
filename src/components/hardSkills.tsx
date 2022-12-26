@@ -5,10 +5,10 @@ export function HardSkills() {
     <section id="hardSkills">
       <h2>{t("Hard skills heading")}</h2>
       <hr />
-      <p style={{ textAlign: "justify" }}>
+      <p>
         <Trans>{t("Computer science")}</Trans>
       </p>
-      <p style={{ textAlign: "justify" }}>
+      <p>
         <Trans>{t("Prior work")}</Trans>
       </p>
       <span>{t("Use frequently")}:</span>
